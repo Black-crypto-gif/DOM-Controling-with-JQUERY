@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1 id= "heading">Create the projects</h1>
+    <div class="heading2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+         labore et dolore magna aliqua.
+          Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo
+          consequat.<span> Duis aute irure dolor in
+          reprehenderit</span> in voluptate velit esse
+           cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <button class="button">
+      click me please !!
+    </button>
+    <p class="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium odio nobis mollitia voluptates ipsa illo. Eveniet ratione quae aliquid, odit quis possimus. Consequatur nesciunt adipisci illum dolorum animi quod in!
+    Necessitatibus quaerat id voluptas corporis eaque cumque quas nobis temporibus beatae quibusdam ad minus odio, inventore illum hic saepe atque repellendus magnam. Tempora ea distinctio eum odit impedit voluptatum amet.
+    Voluptatum quis, voluptates, minus consequatur, explicabo ex at beatae exercitationem necessitatibus tempore quisquam praesentium ipsa. Tenetur explicabo eaque labore cupiditate iure repudiandae, cum adipisci ab totam ullam odit impedit. Molestiae!</p>
+    <button class="night">
+      Day and night button
+    </button>
+    <h1>Top Headlines</h1>
+
+    <div class="articles">
+    
+    </div>
+    <script type="text/javascript">
+    const key = "6af79b05fcf34562b68f9dbd7e59b08f"
+    const url = `https://newsapi.org/v2/everything?q=apple&from=2021-06-24&to=2021-06-24&sortBy=popularity&apiKey=${key}`
+
+    const recievedNews = (newsdata) => {
+        const articlesDiv = document.querySelector(".articles")
+        newsdata.articles.forEach((article) => {
+          
+          const div = document.createElement("div")
+          div.className = "news"
+          div.innerHTML = `
+          <div class="a-box">
+            <div class="img-container">
+              <div class="img-inner">
+                <div class="inner-skew">
+                  <img src="${article.urlToImage}">
+                </div>
+              </div>
+            </div>
+            <div class="text-container">
+              <h3>${article.title}</h3>
+              <h6>${article.author}</h6>
+              <div>
+                
+                ${article.description}
+            </div>
+            <form action="${article.url}">
+              <input class="myButton" type="submit" value="Read about it" />
+            </form>
+          </div>`
+          articlesDiv.appendChild(div)
+          
+        })
+}
+
+
+    fetch(url)
+      .then(response => response.json())
+      .then(recievedNews)
+
+
+    </script>
+  </body>
+</html>

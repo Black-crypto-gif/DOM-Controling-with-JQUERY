@@ -1,0 +1,118 @@
+body{
+  font-family: arial;
+  font-size: 17px;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+h1{
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+.heading2{
+  text-align: center;
+  font-family: cursive;
+
+}
+p{
+  font-family: 'quicksand', sans-serif;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.articles {
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+
+.news {
+	width: 300px;
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid lightgrey;
+}
+
+img {
+	max-width: 300px;
+}
+
+.a-box {
+  display: inline-block;
+  width: 240px;
+  text-align: center;
+}
+
+.img-container {
+    height: 230px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-block;
+}
+
+.img-container img {
+    transform: skew(0deg, -13deg);
+    height: 250px;
+    margin: -35px 0px 0px -70px;
+}
+
+.inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 13deg);
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    height: 250px;
+    width: 200px;
+}
+
+.text-container {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  padding: 120px 20px 20px 20px;
+  border-radius: 20px;
+  background: #fff;
+  margin: -120px 0px 0px 0px;
+  line-height: 19px;
+  font-size: 14px;
+}
+
+.text-container h3 {
+  margin: 20px 0px 10px 0px;
+  color: #04bcff;
+  font-size: 18px;
+}
+
+h6{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

@@ -116,3 +116,14 @@ h6{
 	position:relative;
 	top:1px;
 }
+/* This styles for the nothing.html file */
+
+p{
+  background-color:red;
+}
+h1{
+  background-color:black;
+}
+span{
+  color:blue;
+}
